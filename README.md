@@ -144,3 +144,12 @@ Scan the QR code using [Dingtalk App](https://www.dingtalk.com/) to join in disc
 
 ## LICENSE
 [MIT](LICENSE)
+
+
+## 使用 docker 发布
+```shell
+docker run -itd -v $(pwd):/element -p 8085:8085 --name node-element node:11.15.0
+docker exec -it -w /element node-element /bin/bash
+yarn bootstrap && yarn deploy:build
+yarn publish
+```

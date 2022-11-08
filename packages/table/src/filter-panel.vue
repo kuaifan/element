@@ -185,7 +185,11 @@
     },
     watch: {
       showPopper(val) {
-        if (val === true && parseInt(this.popperJS._popper.style.zIndex, 10) < PopupManager.zIndex) {
+        let zIndex = PopupManager.zIndex;
+        if (typeof window.modalTransferIndex === 'number') {
+          zIndex = window.modalTransferIndex++;
+        }
+        if (val === true && parseInt(this.popperJS._popper.style.zIndex, 10) < zIndex) {
           this.popperJS._popper.style.zIndex = PopupManager.nextZIndex();
         }
       }

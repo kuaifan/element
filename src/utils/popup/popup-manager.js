@@ -51,6 +51,9 @@ const PopupManager = {
   },
 
   nextZIndex: function() {
+    if (typeof window.modalTransferIndex === 'number') {
+      return window.modalTransferIndex++;
+    }
     return PopupManager.zIndex++;
   },
 
