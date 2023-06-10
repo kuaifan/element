@@ -45,9 +45,9 @@
   </div>
 </template>
 <script>
-  import ElCollapseTransition from 'element-ui/src/transitions/collapse-transition';
-  import Emitter from 'element-ui/src/mixins/emitter';
-  import { generateId } from 'element-ui/src/utils/util';
+  import ElCollapseTransition from 'element-sea/src/transitions/collapse-transition';
+  import Emitter from 'element-sea/src/mixins/emitter';
+  import { generateId } from 'element-sea/src/utils/util';
 
   export default {
     name: 'ElCollapseItem',

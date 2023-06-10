@@ -1,4 +1,4 @@
-import { getPropByPath } from 'element-ui/src/utils/util';
+import { getPropByPath } from 'element-sea/src/utils/util';
 
 export const cellStarts = {
   default: {

@@ -1,4 +1,4 @@
-export * from './element-ui'
+export * from './element-sea'
 
-import * as ElementUI from './element-ui'
+import * as ElementUI from './element-sea'
 export default ElementUI

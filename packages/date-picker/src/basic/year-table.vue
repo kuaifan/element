@@ -44,9 +44,9 @@
 </template>
 
 <script type="text/babel">
-  import { hasClass } from 'element-ui/src/utils/dom';
-  import { isDate, range, nextDate, getDayCountOfYear } from 'element-ui/src/utils/date-util';
-  import { arrayFindIndex, coerceTruthyValueToArray } from 'element-ui/src/utils/util';
+  import { hasClass } from 'element-sea/src/utils/dom';
+  import { isDate, range, nextDate, getDayCountOfYear } from 'element-sea/src/utils/date-util';
+  import { arrayFindIndex, coerceTruthyValueToArray } from 'element-sea/src/utils/util';
 
   const datesInYear = year => {
     const numOfDays = getDayCountOfYear(year);
