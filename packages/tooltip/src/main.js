@@ -148,11 +148,17 @@ export default {
   },
   methods: {
     show() {
+      if (this.disabled) {
+        return;
+      }
       this.setExpectedState(true);
       this.handleShowPopper();
     },
 
     hide() {
+      if (this.disabled) {
+        return;
+      }
       this.setExpectedState(false);
       this.debounceClose();
     },
