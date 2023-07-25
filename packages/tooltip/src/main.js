@@ -156,7 +156,7 @@ export default {
     },
 
     hide() {
-      if (this.disabled) {
+      if (!this.showPopper && this.disabled) {
         return;
       }
       this.setExpectedState(false);
