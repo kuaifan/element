@@ -1196,10 +1196,10 @@
 
         if (fixed) {
             var scrollParent = getScrollParent(parent);
-            parentRect.top += scrollParent.scrollTop;
-            parentRect.bottom += scrollParent.scrollTop;
-            parentRect.left += scrollParent.scrollLeft;
-            parentRect.right += scrollParent.scrollLeft;
+            parentRect.top += scrollParent.scrollTop - window.scrollY;
+            parentRect.bottom += scrollParent.scrollTop + window.scrollY;
+            parentRect.left += scrollParent.scrollLeft - window.scrollX;
+            parentRect.right += scrollParent.scrollLeft + window.scrollX;
         }
 
         var rect = {

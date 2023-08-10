@@ -148,8 +148,7 @@ Scan the QR code using [Dingtalk App](https://www.dingtalk.com/) to join in disc
 
 ## 使用 docker 编译
 ```shell
-docker run -itd -v $(pwd):/element -p 8085:8085 --name node-element node:11.15.0
-docker exec -it -w /element node-element /bin/bash
+docker run --rm -it -v $(pwd):/element -p 8085:8085 -w /element --entrypoint=/bin/bash node:11.15.0
 yarn dist
 yarn publish
 ```
