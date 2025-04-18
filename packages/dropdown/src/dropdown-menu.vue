@@ -26,13 +26,13 @@
       }
     },
 
-    data() {
-      return {
-        size: this.dropdown.dropdownSize
-      };
-    },
-
     inject: ['dropdown'],
+
+    computed: {
+      size() {
+        return this.dropdown.dropdownSize;
+      }
+    },
 
     created() {
       this.$on('updatePopper', () => {
