@@ -1026,8 +1026,16 @@
      */
     function getStyleComputedProperty(element, property) {
         // NOTE: 1 DOM access here
-        var css = root.getComputedStyle(element, null);
-        return css[property];
+        if (!element || !(element instanceof Element)) {
+            return null;
+        }
+        try {
+            var css = root.getComputedStyle(element, null);
+            return property in css ? css[property] : null;
+        } catch (error) {
+            console.warn(`Error getting computed style for property "${property}":`, error);
+            return null;
+        }
     }
 
     /**
